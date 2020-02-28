@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CPEHS Login</title>
+
+		<style type="text/css">
+			body{
+			    margin: 0;
+			    padding: 0;
+			    font-family: sans-serif;
+			    background: url(background.jpg) no-repeat center center fixed;
+			    background-size: cover;
+			}
+
+			.login-box{
+			    width: 280px;
+			    position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    transform: translate(-50%, -50%);
+			    color: white;
+			}
+
+			.login-box h1{
+			    float: left;
+			    font-size: 40px;
+			    border-bottom: 6px solid #fbe418;
+			    margin-bottom: 50px;
+			    padding: 13px;
+			}
+
+
+			.textbox{
+			    width: 100%
+			    overflow: hiddden;
+			    font-size: 20px;
+			    padding: 8px 0;
+			    margin: 8px 0;
+			    border-bottom: 1px solid #fbe418;
+			}
+		</style>
+
+		<script type="text/javascript">
+			 function login(){	
+			 	var username, password;
+			 	username = document.getElementById("uname").value;
+			 	password = document.getElementById("pword").value;
+			 	if ( username == "cpehsteachers" && password == "knowledgeiskey"){					
+			 		window.location = "reportcard.html"; 
+			 	} else {
+			 		alert ("Login failed");
+			 		document.getElementById("uname").value = "";
+			 		document.getElementById("pword").value = "";
+			 	}
+			}
+		</script>
+	</head>
+	
+	<body>
+		<form id="form_id" name="form_id" method="post">
+			<div class="login-box">
+				<h1>Login</h1>
+				<div class="textbox"> 									
+					<input type="text" id= "uname" placeholder="Username" name="uname" required="">
+				</div>			
+
+				<div class="textbox">			
+					<input type="password" id="pword" placeholder="Password" name="pword" required="">
+				</div>	
+
+				<input type="button" onclick="login()" value="Login">
+			</div>
+			
+		</form>
+	</body>
+</html>

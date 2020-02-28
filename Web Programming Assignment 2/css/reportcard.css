@@ -1,0 +1,79 @@
+body{
+	background: url(reportgg2.jpg) no-repeat center center fixed;
+	background-size: cover;
+	font-family: sans-serif;
+}
+
+.topdiv{
+	border-style: solid;
+	border-width: 3px;
+}
+
+.reportinput{
+	border-style: solid;
+	border-width: 3px;
+}
+
+a.right{
+	float: right;
+	position: relative;
+	right: 100px;
+}
+
+a.left{
+	margin: 100px;
+}
+
+table.grade{
+	border-style: solid;
+	border-width: 2px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.mynotes{
+	margin-left: 20px;
+	width: 300px;
+	height: 100px;
+	border-style: solid;
+	padding-left: 10px;
+}
+
+
+table.Scale{
+	float: right;
+	margin-right:20px;
+	border-style: solid;
+
+}
+
+.buttons{
+	text-align: center;
+
+}
+
+
+button.b1{
+	margin-right: 10px;
+	width: 15%
+}
+
+button.b2{
+	margin-right: 10px;
+	width: 15%
+}
+
+button.b3{
+	margin-right: 10px;
+	width: 15%
+}
+
+button.b4{
+	margin-right: 10px;
+	width: 15%
+}
+
+button.b5{
+	margin-right: 10px;
+	width: 15%
+}

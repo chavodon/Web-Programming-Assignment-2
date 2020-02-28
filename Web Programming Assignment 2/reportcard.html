@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Student Grades</title>
+
+		<link rel="stylesheet" type="text/css" href="css/reportcard.css">
+
+		<script src="javascript/cpehs.js"></script>
+	</head>
+	
+	<body>
+		<form id="reportcard" name="reportcard">
+			<a href="index.html">Sign Out</a>
+			<br>
+			<br>
+			<div class="topdiv">
+				<h3 style="text-align: center;">REPORT CARD</h3>			
+				<h3 style="text-align: center;">CP ELLINGHAM HIGH SCHOOL</h3>
+				<h4 style="text-align: center;">237 New Hope Road</h4>
+				<h4 style="text-align: center;">Kingstown</h4>
+				<h4 style="text-align: center;">Xamaica</h4>
+				<h4 style="text-align: center;">Phone:(876)-768-8646 &nbsp;&nbsp;&nbsp;&nbsp; Email:info@cpe.edu.ag</h4>
+			</div>
+			<div class="reportinput">	
+				<br>
+				<a class="left">
+					<label>Date&emsp;&emsp;&emsp;&emsp;</label>		
+					<input type="text" id="date" name="date" required="">
+				</a>	
+				<a class="right">
+					<label>Student's Name</label>
+					<input type="text" id="stu_name" name="stu_name" required="">
+				</a>	
+				<br>
+				<br>
+				<a class="left">
+					<label>Parents Name &nbsp;</label>
+					<input type="text" id="par_name" name="par_name" required="">
+				</a>
+				<a class="right">
+					<label>ID#</label>
+					<input type="text" id="id" name="id" required="">
+				</a>
+				<br>
+				<br>
+				<a class="left">
+					<label>Parent's Email</label>
+					<input type="text" id="par_email" name="par_email" required="">
+				</a>
+				<a class="right">
+					<label>Parent's Telephone Number</label>
+					<input type="text" id="par_number" name="par_number" required="">
+				</a>
+				<br>
+				<br>
+				<a class="left">
+					<label>Grade/Room &nbsp;</label>
+					<input type="text" id="room" name="room" required="">
+				</a>
+				<a class="right">
+					<label>Semester/Year</label>
+					<input type="text" id="year" name="year" required="">
+				</a>
+				<br>
+				<br>
+				<a class="left">
+					<label>School Days &nbsp;&nbsp;</label>
+					<input type="text" id="totaldays" name="totaldays" required="">
+				</a>
+				<a class="right">
+					<label>Days Present</label>
+					<input type="text" id="present" name="present" required="">
+				</a>
+				<br>
+				<br>
+				<a class="left">
+					<label>Days Absent &nbsp;&nbsp;</label>
+					<input type="text" id="absent" name="absent" required="">
+				</a>
+				<a class="right">
+					<label>Advisor</label>
+					<select id="advisor" name="advisor" required="">
+						<option value="1"></option>
+						<option value="2">Mrs. Lisa Barnett-Johnson</option>
+						<option value="3">Ms. Tanisha Moore</option>
+						<option value="4">Mr. Alex Wood</option>
+						<option value="5">Ms. Cynthia Goulbourne</option>
+						<option value="6">Mr. Eddy Edwards</option>
+					</select>
+				</a>	
+				<br>	
+				<br>	
+				<br>	
+				<table class="grade">
+					<tr>
+						<th>Subject</th>
+						<th>Test 1</th>
+						<th>Test 2</th>
+						<th>Finals </th>
+						<th>Letter Grade</th>
+					</tr>
+					<tr>
+						<td><input type="text" id="sub1" name="sub" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="test1-1" name="test1" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="test2-1" name="test2" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="finals1" name="finals" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="letgrade1" name="letgrade" onchange="calcLetGrade()" disabled></td>
+					</tr>
+					<tr>
+						<td><input type="text" id="sub2" name="sub" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="test1-2" name="test1" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="test2-2" name="test2" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="finals2" name="finals" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="letgrade2" name="letgrade" onchange="calcLetGrade()" disabled></td>
+					</tr>
+					<tr>
+						<td><input type="text" id="sub3" name="sub" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="test1-3" name="test1" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="test2-3" name="test2" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="finals3" name="finals" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="letgrade3" name="letgrade" onchange="calcLetGrade()" disabled></td>
+					</tr>
+					<tr>
+						<td><input type="text" id="sub4" name="sub" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="test1-4" name="test1" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="test2-4"name="test2" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="finals4"name="finals" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="letgrade4" name="letgrade" onchange="calcLetGrade()" disabled></td>
+					</tr>
+					<tr>
+						<td><input type="text" id="sub5" name="sub" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="test1-5" name="test1" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="test2-5" name="test2" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="finals5" name="finals" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="letgrade5" name="letgrade" onchange="calcLetGrade()" disabled></td>
+					</tr>
+					<tr>
+						<td><input type="text" id="sub6" name="sub" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="test1-6" name="test1" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="test2-6" name="test2" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="finals6" name="finals" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="letgrade6" name="letgrade" onchange="calcLetGrade()" disabled></td>
+					</tr>
+					<tr>
+						<td><input type="text" id="sub7" name="sub" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="test1-7" name="test1" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="test2-7" name="test2" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="finals7" name="finals" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="letgrade7" name="letgrade" onchange="calcLetGrade()" disabled></td>
+					</tr>
+					<tr>
+						<td><input type="text" id="sub8" name="sub" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="test1-8" name="test1" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="test2-8" name="test2" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="finals8" name="finals" value="" onchange="calcLetGrade()"></td>
+						<td><input type="text" id="letgrade8" name="letgrade" onchange="calcLetGrade()" disabled></td>
+					</tr>					
+				</table>
+				<br>
+				<br>
+				<label style="margin-left: 20px"><b>Notes</b></label>	
+				<br>
+				<input type="text" id="notes" name="notes" class="mynotes" required="">				
+				<table class="Scale">
+					<tr>
+						<th><b>Grade Scale</b></th>
+					</tr>
+					<tr>
+						<td>A = 90% - 100%</td>
+						<td>B+ = 80% - 89%</td>
+						<td>B = 70% - 79%</td>
+					</tr>
+					<tr>
+						<td>C+ = 60% - 69%</td>
+						<td>C = 50% - 59%</td>
+						<td>D = 0 - 49%</td>
+					</tr>
+				</table>			
+				<br>
+				<br>
+				<br>	
+				<div class="buttons">
+					<button class="b1" onclick="cancel()">Cancel</button>	
+					<button class="b2" onclick="save()">Save</button>
+					<button class="b3" onclick="email()">Email</button>
+					<button class="b4" onclick="exit(this.form)">Exit</button>
+				</div>	
+				<br>			
+			</div>
+		</form>
+	</body>
+</html>
