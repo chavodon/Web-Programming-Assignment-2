@@ -6,6 +6,5 @@ From completing this assignment I had built on my webpage design knowledge using
   - TD
   - Form
   - Div
-  - a
  
- I also made use of various CSS style attributes such as text alighment,  adjusting the margin or padding of elements, making use of borders and adding backgroud images for the webpages.
+ I also made use of various CSS style attributes such as text alighment,  adjusting the margin or padding of elements, making use of borders and adding backgroud images for the webpages. Also made a javascript function to make calculations from user input.
