@@ -2,8 +2,7 @@
 Second Assignment for Web Programming Module
 
 From completing this assignment I had built on my webpage design knowledge using HTML. I incorporated external Javascript  as well as  css files. Also used other various HTML tags such as:
-  - TR
-  - TD
+  - Table
   - Form
   - Div
  
